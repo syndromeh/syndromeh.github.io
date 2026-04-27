@@ -8,7 +8,7 @@ Hello! I am a graduate student researching Artificial Intelligence (AI).
 
 I am interested in the mathematical structures that appear across various fields related to machine learning and AI. In particular, my main interest is to understand **the true meaning** behind the somewhat abstract equations found in these areas.
 
-This blog was created to document my learning process. Here, I freely write down the thoughts and questions I encounter while studying textbooks, papers, and other academic materials. Therefore, my posts may not always present perfect answers. Instead, my goal is to translate the concepts and ideas that are difficult (at least to me) into my own words.
+This blog was created to document my learning process. Here, I randomly write down the thoughts and questions I encounter while studying textbooks, papers, and other academic materials. Therefore, my posts may not always present perfect answers. Instead, my goal is to translate the concepts and ideas that are difficult (at least to me) into my own words.
 
 ---
 
