@@ -2,3 +2,6 @@ title: Notes Toward Understanding
 description: Personal notes on mathematics, probability, machine learning, and research.
 theme: minima
 markdown: kramdown
+header_pages:
+  - categories.md
+  - about.md

@@ -4,8 +4,6 @@ title: Categories
 permalink: /categories/
 ---
 
-# Categories
-
 ### [Mathematics](/categories/mathematics/)
 
 ### [Probability](/categories/probability/)
