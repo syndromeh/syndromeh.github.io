@@ -2,7 +2,7 @@
 layout: home
 ---
 
-Welcome! This is my personal study notebook.
+### Welcome! This is my personal study notebook.
 
 Here, I document my learning journey across several fields:
 - Mathematics and Probability Theory
