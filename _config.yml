@@ -1,5 +1,6 @@
 title: Notes Toward Understanding
-description: Personal notes on mathematics, probability, machine learning, and research.
+description: Documenting my learning journey
+author: Jinu Hyeon
 theme: "minima"
 markdown: kramdown
 header_pages:

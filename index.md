@@ -2,9 +2,9 @@
 layout: home
 ---
 
-### Welcome! This is my personal study notebook.
+<h1>Welcome!</h1>
 
-Here, I document my learning journey across several fields:
+This is my personal study notebook. I document my learning journey across several fields:
 - Mathematics and Probability Theory
 - Machine Learning
 - Generative Models

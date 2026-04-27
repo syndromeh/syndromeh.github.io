@@ -4,8 +4,8 @@ title: Categories
 permalink: /categories/
 ---
 
-### [Mathematics](/categories/mathematics/)
+- ### [Mathematics](/categories/mathematics/)
 
-### [Machine Learning](/categories/machine-learning/)
+- ### [Machine Learning](/categories/machine-learning/)
 
-### [Misc](/categories/misc/)
+- ### [Misc](/categories/misc/)
