@@ -6,8 +6,6 @@ permalink: /categories/
 
 ### [Mathematics](/categories/mathematics/)
 
-### [Probability](/categories/probability/)
+### [Machine Learning](/categories/machine-learning/)
 
-### [Generative Models](/categories/generative-models/)
-
-### [Notes](/categories/notes/)
+### [Misc](/categories/misc/)
