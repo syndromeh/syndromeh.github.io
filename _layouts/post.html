@@ -29,38 +29,12 @@ layout: base
         {% endfor %}
       </div>
       {%- endif %}
-
-      {%- if page.categories.size > 0 or page.tags.size > 0 -%}
-      <div class="post-categories-tags" style="margin-top: 15px; font-size: 14px; color: #555;">
-        {%- if page.categories.size > 0 -%}
-          <span style="margin-right: 15px;">
-            <strong>📂 Categories:</strong> {{ page.categories | join: ", " }}
-          </span>
-        {%- endif -%}
-        
-        {%- if page.tags.size > 0 -%}
-          <span>
-            <strong>🏷️ Tags:</strong> {{ page.tags | join: ", " }}
-          </span>
-        {%- endif -%}
-      </div>
-      {%- endif -%}
-      </div>
+    </div>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-
-  {% if jekyll.environment == 'production' -%}
-    {% if page.comments == false -%}
-    <div class="comments-disabled-message">
-      Comments have been disabled for this post.
-    </div>
-    {% else -%}
-      {%- include comments.html -%}
-    {% endif -%}
-  {% endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
