@@ -4,7 +4,7 @@ title: Mathematics
 permalink: /categories/mathematics/
 ---
 
-Basic mathematics, measure theory, probability theory, stochastic differential equations, etc.
+Basic mathematics, measure theory, probability theory, random processes, stochastic differential equations, etc.
 
 <ul>
 {% for post in site.categories["Mathematics"] %}
