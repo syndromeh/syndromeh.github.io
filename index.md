@@ -2,12 +2,13 @@
 layout: home
 ---
 
-이 블로그는 개인 공부 및 연구 노트입니다.
+This is my personal study/research notebook.
 
-수학, 확률론, 머신러닝, 강화학습, 생성모델 대한 글을 주로 씁니다. 완성된 지식을 전달하기보다는, 제게 있어 어려운 개념을 제 언어로 다시 정리하고 이해하는 것을 목표로 합니다.
+Here, I document my learning journey across several fields:
+- Mathematics and Probability Theory
+- Machine Learning
+- Generative Models
+- Reinforcement Learning
+- And more
 
----
-
-This blog is a personal study and research notebook.
-
-I write about mathematics, probability theory, machine learning, reinforcement learning, generative models. The goal is not to present finished knowledge, but to clarify difficult ideas in my own words.
+The primary goal of this blog is to translate difficult notions and ideas in my own words, rather than serving polished, well-organized knowledge. Welcome!
