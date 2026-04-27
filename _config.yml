@@ -1,6 +1,8 @@
 title: Notes Toward Understanding
 description: Personal notes on mathematics, probability, machine learning, and research.
-theme: minima
+remote_theme: "jekyll/minima"
+plugins:
+  - jekyll-remote-theme
 markdown: kramdown
 header_pages:
   - categories.md
