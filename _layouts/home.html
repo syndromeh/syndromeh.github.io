@@ -16,11 +16,26 @@ layout: default
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
+        
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
+
+        <div class="post-meta" style="margin-bottom: 10px; font-size: 14px;">
+          {%- if post.categories.size > 0 -%}
+            <span style="margin-right: 15px;">
+              <strong>📂 Categories:</strong> {{ post.categories | join: ", " }}
+            </span>
+          {%- endif -%}
+          
+          {%- if post.tags.size > 0 -%}
+            <span>
+              <strong>🏷️ Tags:</strong> {{ post.tags | join: ", " }}
+            </span>
+          {%- endif -%}
+        </div>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
