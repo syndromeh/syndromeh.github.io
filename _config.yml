@@ -5,3 +5,6 @@ markdown: kramdown
 header_pages:
   - categories.md
   - about.md
+minima:
+  skin: auto
+  hide_site_feed_link: true
