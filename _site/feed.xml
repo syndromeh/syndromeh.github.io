@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-28T00:53:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Notes Toward Understanding</title><subtitle>Documenting my learning journey</subtitle><author><name>Jinu Hyeon</name></author><entry><title type="html">Test</title><link href="http://localhost:4000/misc/2026/04/27/test.html" rel="alternate" type="text/html" title="Test" /><published>2026-04-27T00:00:00+09:00</published><updated>2026-04-27T00:00:00+09:00</updated><id>http://localhost:4000/misc/2026/04/27/test</id><content type="html" xml:base="http://localhost:4000/misc/2026/04/27/test.html"><![CDATA[<p>Test post</p>
-
-<p>Inline math equation: $a^2 + b^2 = c^2$</p>
-
-<p>Display math equation:</p>
-
-\[dX_t = f(X_t, t)dt + g(t)dW_t\]]]></content><author><name>Jinu Hyeon</name></author><category term="Misc" /><category term="test1" /><category term="test2" /><summary type="html"><![CDATA[Test post]]></summary></entry></feed>
