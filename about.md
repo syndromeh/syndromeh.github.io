@@ -14,7 +14,7 @@ I am interested in the mathematical structures that appear across various fields
 
 This blog was created to document my learning process. Here, I randomly write down the thoughts and questions I encounter while studying textbooks, papers, and other academic materials. Therefore, my posts may not always present perfect answers. Instead, my goal is to translate the concepts and ideas that are difficult (at least to me) into my own words.
 
----
+<!-- ---
 
 ### 👋 안녕하세요!
 
@@ -24,4 +24,4 @@ This blog was created to document my learning process. Here, I randomly write do
 
 ### 📝 이 블로그의 목적?
 
-이 블로그는 제가 공부하는 과정을 남기기 위해 만들어졌습니다. 이곳에는 제가 교과서, 논문, 그 외 학술 자료들을 통해 공부하며 마주치는 고민거리를 두서없이 남기고 있습니다. 따라서 글에서 완벽한 정답이 제시되지 않을 수 있습니다. 그 대신에, 저는 공부하면서 마주친 (적어도 제게는) 어려운 개념이나 아이디어를 저만의 언어로 풀어쓰는 것을 목표로 합니다.
+이 블로그는 제가 공부하는 과정을 남기기 위해 만들어졌습니다. 이곳에는 제가 교과서, 논문, 그 외 학술 자료들을 통해 공부하며 마주치는 고민거리를 두서없이 남기고 있습니다. 따라서 글에서 완벽한 정답이 제시되지 않을 수 있습니다. 그 대신에, 저는 공부하면서 마주친 (적어도 제게는) 어려운 개념이나 아이디어를 저만의 언어로 풀어쓰는 것을 목표로 합니다. -->

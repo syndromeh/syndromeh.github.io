@@ -130,3 +130,83 @@ ol.thm-enum li::before {
 .txt-blue { color: #1976d2; }
 
 .txt-gray { color: #c0c0c0; }
+
+/* ==========================================================================
+   Table of Contents (TOC) 스타일링 (논문형 자동 번호 매기기)
+   ========================================================================== */
+#markdown-toc {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  
+  /* 패딩을 줄여서 박스를 조금 더 날렵하게 만듭니다 (위 오른쪽 아래 왼쪽) */
+  padding: 1.2em 1.5em 1.2em 2em; 
+  margin-bottom: 2em;
+  font-size: 0.95em;
+  
+  /* 핵심! 박스 크기를 내용물 길이에 딱 맞춥니다 */
+  width: fit-content; 
+  
+  /* 기본 불릿 점 숨기고 카운터 초기화 */
+  list-style-type: none; 
+  counter-reset: toc-counter; 
+}
+
+#markdown-toc::before {
+  content: "Contents";
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0.8em;
+  margin-left: -0.5em;
+  color: #333;
+}
+
+/* 하위 목차(H3, H4 등)의 설정 */
+#markdown-toc ul {
+  list-style-type: none;
+  counter-reset: toc-counter;
+  padding-left: 1.5em; /* 하위 들여쓰기 */
+  margin-top: 0.3em;
+}
+
+#markdown-toc li {
+  margin-bottom: 0.4em;
+  counter-increment: toc-counter; /* 항목마다 번호 +1 */
+}
+
+/* 마법의 자동 번호 생성기 (1. / 1.1. / 1.1.1.) */
+#markdown-toc li::before {
+  content: counters(toc-counter, ".") ". ";
+  color: $brand-color; /* 번호 색상을 브랜드 컬러로 포인트! */
+  font-weight: 600;
+  margin-right: 0.4em;
+}
+
+#markdown-toc a {
+  color: #555;
+  text-decoration: none;
+}
+
+#markdown-toc a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+/* ==========================================================================
+   Reference (참고문헌) 영역 스타일링
+   ========================================================================== */
+.bibliography {
+  font-size: 0.85em; /* 글자 크기를 살짝 작게 */
+  color: #666;       /* 부드러운 짙은 회색 */
+  border-top: 1px solid #e9ecef; /* 본문과 구분되는 연한 회색 선 */
+  padding-top: 1.5em;
+  margin-top: 3em;
+  line-height: 1.6;
+}
+
+.bibliography h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 1em;
+}
