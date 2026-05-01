@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The notion of \"Almost everywhere\" and the importance of completeness"
+title: "The notion of \"almost everywhere\" and the importance of completeness"
 date: 2026-04-29 12:00:00 +0900
 categories: [Mathematics]
 tags: [Measure Theory, Probability Theory]
@@ -151,7 +151,7 @@ The following are equivalent:
 
 **(a) $\Rightarrow$ (c)**
 
-Define $E = \\{ f_n \to f \\}$. Then $E \in \Sigma$ since $\mu$ is complete and $\mu(E^c) = 0$ by the assumption.
+Define $E = \\{ f_n \to f \\}$. Then $E \in \Sigma$ since $\mu(E^c) = 0$ and $\mu$ is complete by the assumption.
 
 Let $g_n = f_n \mathbf 1_E$ and $g = f \mathbf 1_E$. Then $g_n$ are clealy measurable and $g$ is also measurable since pointwise limit conserves measurability.
 
@@ -206,12 +206,64 @@ Suppose that $(X, \Sigma, \mu)$ is a measure space. Let $\mathcal N = \\{ N \in 
 <summary>Proof of Proposition 4</summary>
 <div class="proof-content" markdown="1">
 
-...
+**$\overline \Sigma$ is a $\sigma$-algebra.**
+
+Consider $E, E_n \in \Sigma$ and $F, F_n \subseteq X$ such that there exist $N, N_n \in \mathcal N$ where $F \subseteq N$ and $F_n \subseteq N_n$. 
+
+1. $\overline \Sigma$ is closed under countable unions.
+
+    $$
+    \bigcup_n (E_n \cup F_n) = (\bigcup_n E_n) \cup (\bigcup_n F_n) \text{, where } \bigcup_n F_n \subseteq \bigcup_n N_n \in \mathcal N.
+    $$
+
+2. $\overline \Sigma$ is closed under complements.
+
+    $$
+    (E \cup F)^c = E^c \cap F^c = \underbrace{(E^c \cap N^c)}_{\in \Sigma} \cup \underbrace{(N \setminus (E \cup F))}_{\subseteq N \in \mathcal N}.
+    $$
+
+Therefore, $\overline \Sigma$ is a $\sigma$-algebra.
+
+**There exists an extension $\overline \mu$ of $\mu$ on $\overline \Sigma$.**
+
+We now can define a measure on $(X, \overline \Sigma)$, namely, we can define $\overline \mu$ by
+
+$$
+\overline \mu(E \cup F) = \mu(E).
+$$
+
+Then it is clearly an extension of $\mu$ on $\overline \Sigma$.
+
+We first need to verify that $\overline \mu$ is well-defined and is a measure on $\overline \Sigma$. Suppose $E \cup F = E' \cup F'$ where $E' \in \Sigma$ and $F' \subseteq N' \in \mathcal N$. Then
+
+$$
+\mu(E) \leq \mu(E' \cup N') \leq \mu(E') + \mu(N') = \mu(E').
+$$
+
+The symmetry gives that $\mu(E) = \mu(E')$, *i.e.*, $\overline \mu$ is well-defined.
+
+Clearly $\overline \mu(\phi) = 0$. For disjoint $E_n \cup F_n$, it is clear that the following hold:
+
+$$
+\overline \mu(\bigcup_n (E_n \cup F_n)) = \mu(\bigcup_n E_n) = \sum_n \mu(E_n) = \sum_n \overline \mu(E_n \cup F_n).
+$$
+
+Thus, $\overline \mu$ is indeed a measure on $\overline \Sigma$.
+
+**The extension is unique.**
+
+Further, suppose $\nu$ is another extension. Then
+
+$$
+\mu(E) = \nu(E) \leq \nu(E \cup F) \leq \nu(E \cup N) \leq \nu(E) + \nu(N) = \nu(E) = \mu(E),
+$$
+
+which implies $\nu = \overline \mu$. Therefore, the extension is unique.
 
 </div>
 </details>
 
-위 proposition은 임의의 measure space는 그에 대응되는 completion이 존재함을 보여준다. 그러나 이것만으로는 우리가 원래 다루고자 했던 space에서 measurable인 함수를 찾는 데에는 약간 부족하다.
+위 proposition은 임의의 measure space에는 그에 대응되는 completion이 존재함을 보여준다. 그러나 이것만으로는 우리가 원래 다루고자 했던 space에서 measurable인 함수를 찾는 데에는 약간 부족하다.
 
 다음 결과는 더 나아가, completion $(X, \overline \Sigma, \overline \mu)$에 대해 measurable인 모든 함수는 original space $(X, \Sigma, \mu)$ 에서 measurable인 version이 존재함을 보여준다.
 
@@ -226,7 +278,17 @@ Let $(X, \Sigma, \mu)$ be a measure space and $(X, \overline \Sigma, \overline \
 <summary>Proof of Proposition 5</summary>
 <div class="proof-content" markdown="1">
 
-...
+It is obvious by definition of $\overline \Sigma$ when $f$ is an indicator function and so is for a simple $f$.
+
+Now suppose $\(\phi_n\)$ is a sequence of $\overline \Sigma$-measurable simple functions converges to $f$. Then we can define $\(\tilde \psi_n \)$ where each $\tilde \psi_n$ is $\Sigma$ measurable and $\phi_n = \tilde \psi_n$ except on $F_n$ where $\overline \mu(F_n) = 0$.
+
+Now choose $N\in \Sigma$ such that $\bigcup_n F_n \subseteq N$ and $\mu(N) = 0$. We can define a sequence of simple functions $\(\psi_n\)$ by
+
+$$
+\psi_n = \tilde \psi_n \mathbf 1_{N^c}.
+$$
+
+Define $g = \lim_n \psi_n$, then $g$ is $\Sigma$-measurable and $f = g$ a.e.
 
 </div>
 </details>
@@ -234,7 +296,7 @@ Let $(X, \Sigma, \mu)$ be a measure space and $(X, \overline \Sigma, \overline \
 Proposition 4와 5는 completeness에 관련된 문제를 회피할 수 있는 방법이 된다. 예를 들어 measure space $(X, \Sigma, \mu)$가 (not necessarily complete) 주어져있고, 함수열 $(f_n)$ 이 $\Sigma$-measurable이며, $f_n \to f$ *a.e.* 라고 하자. 이 때 $f$는 $\Sigma$-measurable이 아닐 수 있다. 그러나 Proposition 4와 5를 통해서 우리는 자연스럽게 다음과 같이 문제를 회피할 수 있다.
 
 1. $(X, \Sigma, \mu)$에 대한 completion $(X, \overline{\Sigma}, \overline{\mu})$을 생각한다. (Proposition 4)
-2. $(X, \overline{\Sigma}, \overline{\mu})$ 에서 극한 함수 $\tilde f$를 생각한다. 이 때 complete이므로 $\tilde f$는 $\overline{\Sigma}$-measurable이다.
+2. $(X, \overline{\Sigma}, \overline{\mu})$ 에서 극한 함수 $\tilde f$를 생각한다. (극한이 ) 이 때 complete이므로 $\tilde f$는 $\overline{\Sigma}$-measurable이다.
 3. $\tilde f$와 거의 모든 곳에서 같으면서 $\Sigma$-measurable인 함수 $f$를 구한다. (Proposition 5)
 
 이러한 일련의 과정을 통해 우리는 극한 함수의 measurability를 크게 걱정하지 않고도 많은 논의를 이어갈 수 있다.
