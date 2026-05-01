@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Notion of 'Almost Everywhere' and the Importance of Completeness"
+title: "The Notion of \"Almost Everywhere\" and the Importance of Completeness"
 date: 2026-05-01 20:29:00 +0900
 categories: [Mathematics]
 tags: [Measure Theory]
@@ -8,7 +8,7 @@ tags: [Measure Theory]
 * TOC
 {:toc}
 
-As the very first post on this blog, I want to tackle a concept that will appear constantly in our future discussions: *almost everywhere* (or *almost surely* in probability theory). I will walk through why the 'almost everywhere' concept is so useful, the hidden problems it can cause, and how 'completeness' offers a natural fix.
+As the very first post on this blog, I want to tackle a concept that will appear constantly in our future discussions: *almost everywhere* (or *almost surely* in probability theory). I will walk through why the "almost everywhere" concept is so useful, the hidden problems it can cause, and how "completeness" offers a natural fix.
 
 ## The Power of "Almost Everywhere"
 
@@ -103,7 +103,7 @@ In these contexts, Proposition 1 allows us to comfortably carry out our analysis
 
 However, this "almost everywhere equality" isn't a silver bullet. Note that in Proposition 1, we explicitly assumed the measurability (integrability) of both $f$ and $g$. If $f$ is measurable and $f = g$ a.e., it doesn't automatically guarantee that $g$ is measurable.
 
-A classic example illustrating this involves the Cantor set. Let's recall a few well-known facts about it <span class="txt-gray">(we'll take these for granted for now, along with the definition of the Cantor set itself)</span>:
+A classic example illustrating this involves the Cantor set. Let's recall a few well-known facts about it: <span class="txt-gray">(we'll take these for granted for now, along with the definition of the Cantor set itself)</span>
 
 <div class="math-box box-thm" markdown="1">
 <span class="box-title">Proposition 2</span>
