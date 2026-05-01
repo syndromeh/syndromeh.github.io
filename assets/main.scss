@@ -1,5 +1,6 @@
 ---
 ---
+$brand-color: #FF537B;
 @import "minima";
 
 hr {
@@ -7,12 +8,125 @@ hr {
   margin-bottom: 50px;
 }
 
-a {
-  color: #7e57c2;
-  text-decoration: none;
-}
-
 a:hover {
-  color: #512da8;
+  color: #ae0646;
   text-decoration: underline;
 }
+
+.math-box {
+  margin: 1.5em 0;
+  padding: 1.2em 1.5em;
+  border-radius: 6px;
+  border-left: 5px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.math-box .box-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.6em;
+  font-size: 1.1em;
+}
+
+/* Definition: Professional Teal/Blue */
+.box-def {
+  border-left-color: #0097a7;
+  background-color: #f0f9fa;
+}
+.box-def .box-title { color: #006064; }
+
+/* Theorem: Matches your $brand-color (#FF537B) */
+.box-thm {
+  border-left-color: $brand-color;
+  background-color: #fff5f7; /* Very light pink tint */
+}
+.box-thm .box-title { color: #c2185b; }
+
+/* Note/Remark: Warm Amber */
+.box-note {
+  border-left-color: #ffa000;
+  background-color: #fffdf2;
+} 
+.box-note .box-title { color: #795548; }
+
+/* Proof Toggle Styles */
+details.proof-container {
+  margin: 1.5em 0;
+  padding: 0.5em 0;
+}
+
+details.proof-container summary {
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+  outline: none;
+  list-style: none; /* Remove default arrow in some browsers */
+}
+
+/* Add a custom triangle or text before 'Proof' */
+details.proof-container summary::-webkit-details-marker {
+  display: none; /* Hide default Chrome arrow */
+}
+
+details.proof-container summary::before {
+  content: "▶ ";
+  font-size: 0.8em;
+  margin-right: 5px;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+details[open].proof-container summary::before {
+  content: "▼ ";
+}
+
+.proof-content {
+  margin-top: 1em;
+  padding-left: 1.5em;
+  border-left: 2px solid #eee;
+  color: #333;
+}
+
+/* Optional: Add a QED symbol (black square) at the end */
+.proof-content::after {
+  content: " \25FC";
+  float: right;
+  color: #999;
+}
+
+/* ==========================================================================
+   TFAE 리스트 스타일: (a), (b), (c)
+   ========================================================================== */
+ol.thm-enum {
+  list-style-type: none; /* 기본 숫자 지우기 */
+  counter-reset: thm-enum-counter;
+  padding-left: 2em; /* 들여쓰기 여백 */
+}
+
+ol.thm-enum li {
+  counter-increment: thm-enum-counter;
+  position: relative;
+  margin-bottom: 0.5em; /* 항목 간 간격 */
+}
+
+ol.thm-enum li::before {
+  content: "(" counter(thm-enum-counter, lower-alpha) ")"; /* (a), (b) 형식 지정 */
+  position: absolute;
+  left: -2em; /* 괄호를 왼쪽으로 살짝 빼서 정렬 */
+  color: inherit;
+}
+
+/* ==========================================================================
+   Text Coloring Utilities
+   ========================================================================= */
+
+/* Use your default $brand-color (#FF537B) */
+.txt-p { color: $brand-color; }
+
+/* Danger/Alert Color (e.g., Red) */
+.txt-red { color: #d32f2f; }
+
+/* Important Info Color (e.g., Blue) */
+.txt-blue { color: #1976d2; }
+
+.txt-gray { color: #c0c0c0; }
