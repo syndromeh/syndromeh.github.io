@@ -211,9 +211,65 @@ ol.thm-enum li::before {
   margin-bottom: 1em;
 }
 
+.bibliography ol {
+  list-style: none;      /* 기본 숫자(1. 2.) 숨기기 */
+  counter-reset: bib;    /* 'bib'라는 이름의 카운터 초기화 */
+  padding-left: 0;
+}
+
+.bibliography ol li {
+  counter-increment: bib; /* 리스트 아이템마다 숫자 1씩 증가 */
+  position: relative;
+  padding-left: 2.5em;    /* 번호가 들어갈 왼쪽 여백 확보 */
+  margin-bottom: 0.8em;
+}
+
+.bibliography ol li::before {
+  content: "[" counter(bib) "]"; /* 번호 앞뒤에 대괄호 추가 */
+  position: absolute;
+  left: 0;
+  font-weight: 500;       /* 번호만 살짝 강조하고 싶을 때 */
+  color: #666;            /* 번호 색상 설정 */
+  width: 2em;
+  text-align: right;
+}
+
 /* ==========================================================================
    Italic (기울임꼴) 폰트 스타일 변경
    ========================================================================== */
 em, i {
   font-family: Georgia, serif; 
+}
+
+/* ==========================================================================
+   각주(Footnotes) 스타일링 (논문 하단 감성)
+   ========================================================================== */
+.footnotes {
+  margin-top: 4em;               /* References와 넉넉하게 간격 띄우기 */
+  padding-top: 1.5em;            /* 선과 텍스트 사이 여백 */
+  border-top: 1px solid #ddd;    /* 연한 회색 가로줄 (가장 중요!) */
+  font-size: 0.85em;             /* 글자 크기를 살짝 작게 */
+  color: #555;                   /* 글자 색상을 본문보다 연한 회색으로 */
+}
+
+/* 각주 리스트 정렬 및 간격 */
+.footnotes ol {
+  padding-left: 1.5em;
+}
+
+.footnotes li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+/* 되돌아가기 화살표(↩) 디자인 (옵션) */
+.reversefootnote {
+  text-decoration: none;
+  color: #999;
+  margin-left: 5px;
+  font-family: sans-serif; /* 화살표가 예쁘게 나오도록 */
+}
+
+.reversefootnote:hover {
+  color: #1a5276; /* 마우스 올렸을 때 강조 */
 }

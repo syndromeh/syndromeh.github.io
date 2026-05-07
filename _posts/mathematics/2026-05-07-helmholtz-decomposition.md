@@ -255,7 +255,7 @@ $$
 \|h_n - h_m\|_H^2 = 2\|v - h_n\|_H^2 + 2\|v - h_m\|_H^2 - 4 \left\| v - \frac{h_n + h_m}{2} \right\|_H^2.
 $$
 
-<span class="txt-gray">(This identity is also referred to as the *parallelogram law*)</span>
+<span class="txt-gray">This identity is also referred to as the *parallelogram law*.</span>
 
 Since $M$ is a vector space,
 
@@ -595,7 +595,9 @@ $$
 \nabla \cdot (p_t v_t) = \nabla \cdot (p_t g_t).
 $$
 
-Hence, $v_t$ and $g_t$ induce the same marginal density evolution. 
+Hence, $v_t$ and $g_t$ induce the same marginal density evolution.[^1]
+
+[^1]: Strictly speaking, this argument is *pointwise* in time. To formulate the whole time-dependent decomposition rigorously, one also needs suitable measurability and integrability of $t\mapsto g_t,u_t$.
 
 The $p_t$-solenoidal component $u_t$ may alter the trajectory-level probability distribution, but it does not change the marginal density evolution. Therefore, the canonical component
 
