@@ -70,7 +70,7 @@ $$
 Equivalently, if $\mu(dx) = \rho(x) dx$, then
 
 $$
-L^2_\rho(\Omega; \mathbb R^2) = L^2(\mu; \mathbb R^d).
+L^2_\rho(\Omega; \mathbb R^d) = L^2(\mu; \mathbb R^d).
 $$
 
 Thus $L^2_\rho$ is a Hilbert space.
@@ -266,7 +266,7 @@ $$
 Therefore,
 
 $$
-\left\| v - \frac{h_n + h_m}{2} - v \right\|_H \geq \delta.
+\left\| v - \frac{h_n + h_m}{2} \right\|_H \geq \delta.
 $$
 
 Hence,
@@ -353,7 +353,7 @@ We now apply [Lemma 1](#lem-orthogonal-projection) to the density-weighted veloc
 <div class="math-box box-thm" id="thm-helmholtz-decomposition" markdown="1">
 <span class="box-title">Theorem 2. (Distributional Helmholtz Decomposition)</span>
 
-Let $\Omega \in \mathbb R^d$ open and let $\rho \in L^1 (\Omega)$ satisty
+Let $\Omega \subseteq \mathbb R^d$ open and let $\rho \in L^1 (\Omega)$ satisty
 
 $$
 \rho \geq 0, \quad 0 < \int_\Omega \rho(x) dx < \infty.
@@ -532,7 +532,7 @@ $$
 By Cauchy-Schwarz:
 
 $$
-| \langle w, h \rangle_\rho - \langle w, \nabla \varphi_n \rangle_\rho| = |\langle w, h - \nabla \varphi_n \rangle| \leq \|w\|_{L_\rho^2}\|h - \nabla \varphi\|_{L_\rho^2} \quad \forall w \in L_\rho^2 (\Omega; \mathbb R^d),
+| \langle w, h \rangle_\rho - \langle w, \nabla \varphi_n \rangle_\rho| = |\langle w, h - \nabla \varphi_n \rangle_\rho| \leq \|w\|_{L_\rho^2}\|h - \nabla \varphi_n\|_{L_\rho^2} \quad \forall w \in L_\rho^2 (\Omega; \mathbb R^d),
 $$
 
 we get
@@ -552,7 +552,7 @@ $$
 Then $\tilde v = g + w$ is the Helmholtz decomposition of $\tilde v$. By the kinetic energy splitting,
 
 $$
-\| \tilde v \|_{L_\rho^2} = \| g \|_{L_\rho^2} + \| w \|_{L_\rho^2}.
+\| \tilde v \|_{L_\rho^2}^2 = \| g \|_{L_\rho^2}^2 + \| w \|_{L_\rho^2}^2.
 $$
 
 Therefore,
@@ -561,7 +561,7 @@ $$
 \| \tilde v \|_{L_\rho^2} \geq \| g \|_{L_\rho^2}.
 $$
 
-Furthermore, equality holds if and only if $$\| w \|_{L_{\rho}^2}=0$$, which means $\tilde v = g$ *a.e.*
+Furthermore, equality holds if and only if $$\| w \|_{L_{\rho}^2}=0$$, which means $\tilde v = g$ $\rho(x)dx$-*a.e.*
 </div>
 </details>
 
