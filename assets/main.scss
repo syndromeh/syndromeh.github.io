@@ -131,6 +131,12 @@ ol.thm-enum li::before {
 
 .txt-gray { color: #c0c0c0; }
 
+.aside {
+  color: #c0c0c0;        /* mid-gray, adjust to taste */
+  font-style: italic;
+  font-size: 0.8em;  /* slightly smaller */
+}
+
 /* ==========================================================================
    Table of Contents (TOC) 스타일링 (논문형 자동 번호 매기기)
    ========================================================================== */
@@ -272,4 +278,26 @@ em, i {
 
 .reversefootnote:hover {
   color: #1a5276; /* 마우스 올렸을 때 강조 */
+}
+
+/* ==========================================================================
+   인용구 (Blockquote) 디자인 강화
+   ========================================================================== */
+blockquote {
+  margin: 2em 0;
+  padding: 0.8em 1.2em;
+  border-left: 4px solid #2a84bd; /* 짙은 네이비색 포인트 선 */
+  background-color: #f8f9fa;      /* 아주 연한 회색 배경으로 본문과 분리 */
+  color: #333;
+  font-size: 1.1em;              /* 본문보다 글자를 아~주 살짝 크게 */
+  font-style: italic;             /* 질문/인용의 느낌을 살림 */
+  border-radius: 0 4px 4px 0;     /* 오른쪽 모서리만 살짝 둥글게 */
+}
+
+/* 인용구 안의 문단 간격 조정 */
+blockquote p {
+  margin-bottom: 0.8em;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
 }

@@ -8,7 +8,7 @@ permalink: /about/
 
 I am a graduate student researching Artificial Intelligence (AI).
 
-I am interested in the mathematical structures that appear across various fields related to machine learning and AI. In particular, my main interest is to understand **the true meaning** behind the somewhat abstract equations found in these areas.
+I am interested in the mathematical structures that appear across various fields related to machine learning and AI. In particular, my main interest is to understand the true meaning behind the somewhat abstract equations found in these areas.
 
 ### 📝 Why this blog?
 
