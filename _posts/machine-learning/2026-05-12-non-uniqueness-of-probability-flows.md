@@ -223,7 +223,7 @@ The uniqueness is in the direction of $\(v_t,\,p_0\) \mapsto p_t$. The reverse d
 
 ## A Simple Example: Isotropic Gaussian Marginal Flow
 
-### Affine drift for an isotropic Gaussian marginal flow
+### Constructing affine drifts for Gaussians
 
 In this section, we demonstrate that the non-uniqueness is not merely a theoretical possibility, but a concrete reality. Specifically, we will explicitly construct multiple distinct velocity fields $v_t$ that generate the exact same marginal flow $p_t$.
 
@@ -367,7 +367,7 @@ which completes the verification.
 
 It is worth noting that even if we restrict $v_t$ to be affine, the choice of drift is not uniquely determined. A systematic classification of this non-uniqueness is a fascinating topic that we will save for the joy of the next chapter. For now, we will explicitly construct three distinct drifts that all generate the exact same marginal flow: (1) a symmetric affine drift, (2) an asymmetric affine drift, and (3) a nonlinear drift.
 
-### Simulation
+### Three drifts, one marginal flow
 
 Let us consider a 2D state space $\mathbb{R}^2$ and fix an isotropic Gaussian marginal flow $p_t$ governed by the following parameters:
 
@@ -446,7 +446,7 @@ This brings us back to our core question: given a fixed marginal flow $p_t$, wha
 
 While our geometric intuition strongly hints at an obvious answer <span class="aside">(the straightest, non-rotating path)</span>, we cannot rely on visual intuition alone. In the following section, we will take a deep dive into the theoretical framework that rigorously justifies this canonical choice.
 
-## Decomposition of the Vector Fields
+## Vector Field Decomposition
 
 To systematically understand this non-uniqueness, we now introduce a general framework for classifying these vector fields. <span class="txt-red">**The core idea is to decompose the vector field into two distinct components**</span>: one that actually drives the evolution of the marginal flow, and another that leaves the marginal flow completely unaffected. This is precisely stated in the following theorem.
 
@@ -510,7 +510,7 @@ For our purposes, the relevant condition is the weighted version: $u_t$ is *$p_t
 
 With our newly established theoretical framework in place, let us look back at the 2D Gaussian simulation from the previous section. We can now perfectly demystify the particle behaviors we observed.
 
-### The symmetric affine drift is the kinetic energy minimizer
+### Symmetric affine drift as the energy minimizer
 
 The symmetric affine drift $v_t^{(1)}$ derived in [Proposition 2](#prop-gaussian-affine-drift) is not just one of many drifts inducing the given marginal flow — it is the *kinetic energy minimizer* among them. The reason is that $v_t^{(1)}$ is a pure gradient field.
 
@@ -529,7 +529,7 @@ $$
 so $v_t^{(1)} = \nabla \phi_t$ is a gradient field. By [Theorem 3](#thm-helmholtz-informal), gradient fields are exactly the kinetic energy minimizers within the equivalence class of marginal-preserving drifts. Hence $v_t^{(1)}$ is the canonical choice in this sense: it transports the prescribed marginal flow with the least kinetic effort, and intuitively, *along the most direct paths*.
 
 
-### Skew-symmetric component controls how particles rotate around the mean
+### Skew-symmetric component induces rotation
 
 What about the asymmetric drift $v_t^{(2)}$? We constructed it by adding a skew-symmetric matrix term:
 
